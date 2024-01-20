@@ -4,7 +4,7 @@ services:
         restart: always
         volumes:
             - '/var/run/docker.sock:/var/run/docker.sock'
-            - 'portainer_data:/data'
+            - '.data:/data'
         environment:
             - PUID=0
             - PGID=0
@@ -14,7 +14,4 @@ services:
             - '9000:9000'    
         container_name: portainer
         image: 'portainer/portainer-ce'
-
-volumes:
-  portainer_data:
   

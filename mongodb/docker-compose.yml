@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     network_mode: host
     volumes:
-      - './data:/data/db'
+      - '.data:/data/db'
     env_file:
       - .env
     expose:
