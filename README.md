@@ -8,6 +8,8 @@ There is a easy install script. Enjoy it.
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
+# if you live in China.
+sh get-docker.sh --mirror Aliyun
 ```
 > https://github.com/docker/docker-install
 
