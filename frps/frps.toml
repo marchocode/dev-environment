@@ -1,0 +1,10 @@
+bindPort = 7000
+
+vhostHTTPPort = 80
+vhostHTTPSPort = 443
+
+auth.method = "token"
+
+# auth token
+auth.token = "your_token_input_here"
+

@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    image: 'snowdreamtech/frps'
+    container_name: frps
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - './frps.toml:/etc/frp/frps.toml'
