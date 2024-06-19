@@ -6,10 +6,9 @@ We need to prepare the docker environment. so, I wish you have installed it.
 
 There is a easy install script. Enjoy it.
 ```sh
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+sh install-docker-ce.sh
 # if you live in China.
-sh get-docker.sh --mirror Aliyun
+sh install-docker-ce.sh --mirror Tsinghua
 ```
 > https://github.com/docker/docker-install
 
