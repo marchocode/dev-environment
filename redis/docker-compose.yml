@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'redis'
+    container_name: redis
+    restart: unless-stopped
+    user: ${PUID}:${PGID}  
+    network_mode: host
+    volumes:
+      - './data:/data'
+    env_file:
+      - .env

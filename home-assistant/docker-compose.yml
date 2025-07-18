@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'homeassistant/home-assistant'
+    container_name: home-assistant
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    network_mode: host
+    volumes:
+      - '/mnt/data/home-assistant/config:/config'
+    env_file:
+      - .env  

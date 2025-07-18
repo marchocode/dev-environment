@@ -1,0 +1,13 @@
+services:
+  gitea:
+    image: gitea/gitea:latest-rootless
+    container_name: gitea
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - .env      
+    volumes:
+      - ./data:/var/lib/gitea
+      - ./config:/etc/gitea      
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro

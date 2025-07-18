@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'kibana:7.17.25'
+    container_name: 'kibana'
+    restart: unless-stopped
+    user: ${PUID}:${PGID} 
+    network_mode: host
+    volumes:
+      - '/mnt/data/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml'        
+    env_file:
+      - .env 

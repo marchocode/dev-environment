@@ -1,0 +1,10 @@
+services:
+  lan:
+    image: aceberg/watchyourlan
+    container_name: watchyourlan
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - '/mnt/data/watchyourlan:/data/WatchYourLAN'
+    env_file:
+      - .env        

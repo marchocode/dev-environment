@@ -1,0 +1,13 @@
+services:
+    portainer:
+        restart: unless-stopped
+        network_mode: host  
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - '/mnt/data/portainer:/data'
+        environment:
+            - PUID=0
+            - PGID=0
+            - UMASK=022
+        container_name: portainer
+        image: 'portainer/portainer-ce'

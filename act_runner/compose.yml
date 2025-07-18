@@ -1,0 +1,10 @@
+services:
+  act:
+    image: gitea/act_runner:latest
+    container_name: act_runner
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'  
+    env_file:
+      - .env      

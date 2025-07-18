@@ -1,0 +1,13 @@
+services:
+  app:
+    image: 'ghcr.io/ajnart/homarr:latest'
+    container_name: homarr
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    network_mode: host  
+    volumes:
+      - '/mnt/data/homarr/data:/data'
+      - '/mnt/data/homarr/configs:/app/data/configs'
+      - '/mnt/data/homarr/icons:/app/public/icons'
+    env_file:
+      - .env

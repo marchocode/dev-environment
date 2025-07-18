@@ -1,0 +1,10 @@
+services:
+  app:
+    image: 'hibiken/asynqmon'
+    container_name: asynqmon
+    restart: unless-stopped
+    user: ${PUID}:${PGID} 
+    network_mode: host
+    command: "--port=8001"
+    env_file:
+      - .env

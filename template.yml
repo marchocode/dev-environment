@@ -1,0 +1,12 @@
+services:
+  dockge:
+    image: louislam/dockge:1
+    container_name: dockge  
+    restart: unless-stopped
+    network_mode: host
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/data/dockge:/app/data
+      - ./stacks:/opt/stacks

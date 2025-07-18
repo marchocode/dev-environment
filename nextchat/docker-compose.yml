@@ -1,0 +1,9 @@
+services:
+  app:
+    image: 'yidadaa/chatgpt-next-web'
+    container_name: nextchat
+    restart: unless-stopped
+    user: ${PUID}:${PGID}
+    network_mode: host
+    env_file:
+      - .env  

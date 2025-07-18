@@ -1,0 +1,11 @@
+services:
+  app:
+    image: chartdb
+    container_name: chartdb
+    ports:
+      - '5002:80'
+    expose:
+      - 80 
+    restart: unless-stopped
+    env_file:
+      - .env        

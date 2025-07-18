@@ -1,0 +1,8 @@
+services:
+  caddy:
+    image: jeessy/ddns-go
+    container_name: ddns-go
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - /mnt/data/ddns:/root

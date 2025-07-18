@@ -1,0 +1,13 @@
+services:
+  app:
+    image: 'elasticsearch:7.17.25'
+    container_name: 'elasticsearch'
+    restart: unless-stopped
+    user: ${PUID}:${PGID} 
+    network_mode: host
+    volumes:
+      - '/mnt/data/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml'
+      - '/mnt/data/elasticsearch/plugins:/usr/share/elasticsearch/plugins'
+      - '/mnt/data/elasticsearch/data:/usr/share/elasticsearch/data'  
+    env_file:
+      - .env

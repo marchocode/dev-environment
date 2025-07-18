@@ -1,0 +1,12 @@
+services:
+    alist:
+        image: 'xhofe/alist:latest'
+        container_name: alist
+        network_mode: host
+        volumes:
+            - '/mnt/data/alist:/opt/alist/data'
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - UMASK=022
+        restart: unless-stopped

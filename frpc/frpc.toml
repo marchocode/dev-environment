@@ -1,0 +1,19 @@
+serverAddr = "chaobei.xyz"
+serverPort = 7000
+
+auth.method = "token"
+auth.token = "9a8c94f6-e419-45e1-a595-xxxx"
+
+[[proxies]]
+name = "ubuntu"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 8022
+
+[[proxies]]
+name = "notify"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8007
+remotePort = 8080

@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'mysql:8'
+    container_name: mysql
+    restart: unless-stopped
+    user: ${PUID}:${PGID} 
+    network_mode: host
+    volumes:
+      - './data:/var/lib/mysql'
+    env_file:
+      - .env    

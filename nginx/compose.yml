@@ -1,0 +1,13 @@
+services:
+  master:
+    image: nginx
+    container_name: nginx
+    network_mode: host
+    restart: unless-stopped
+    env_file:
+      - .env 
+    volumes:
+      - '/mnt/data/nginx/nginx.conf:/etc/nginx/nginx.conf'
+      - '/mnt/data/nginx/conf.d:/etc/nginx/conf.d'
+      - '/mnt/data/nginx/log:/var/log/nginx'
+      - '/mnt/data/nginx/cert:/etc/nginx/cert'  
